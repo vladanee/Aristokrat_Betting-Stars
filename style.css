@@ -15,14 +15,12 @@
     justify-content: space-between;
     padding: 20px 40px;
     background: linear-gradient(to right, #004d1a, #000000);
-    /* Green to Black */
     height: 80px;
 }
 
 /* Logo */
 .logo img {
     height: 50px;
-    /* Adjust as needed */
 }
 
 /* Navigation Links */
@@ -42,7 +40,6 @@
 .nav-links li a:hover,
 .nav-links li a.active {
     color: #15D866;
-    /* Green hover effect */
 }
 
 /* Login Button */
@@ -216,7 +213,6 @@
 }
 
 /* Carousel Dots */
-/* Position the dots below the carousel */
 .carousel-dots {
     display: flex;
     justify-content: center;
@@ -287,8 +283,6 @@
     font-weight: 600;
     margin-bottom: 10px;
 }
-
-/* Section Title */
 .trending-games h2 {
     font-size: 32px;
     font-weight: bold;
@@ -303,8 +297,6 @@
     margin: auto;
     padding: 20px 0px;
 }
-
-/* Hide scrollbar */
 .game-carousel::-webkit-scrollbar {
     display: none;
 }
@@ -325,7 +317,6 @@
     border: 2px solid rgba(0, 255, 102, 0.5);
     transition: transform 0.3s ease;
     flex: 0 0 calc(100% / 4 - 10px);
-    /* Only 4 items per view */
     margin: 0 5px;
 }
 
@@ -377,20 +368,22 @@
     background: #15D866;
 }
 
-/* Make Cards Clickable */
 .game-card {
     text-decoration: none;
-    /* Remove link underline */
     color: white;
-    /* Ensure text remains white */
     display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect */
 .game-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 255, 102, 0.3);
+}
+/* Mobile View */
+@media (max-width: 768px) {
+    .game-card {
+        flex: 0 0 calc(100% / 2 - 10px); 
+    }
 }
 
 /* Trending Sports Section */
@@ -415,42 +408,46 @@
 /* Sports Carousel */
 .sports-carousel {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    overflow-x: auto;
+    overflow: hidden; 
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
     padding: 20px 0;
-    scroll-behavior: smooth;
 }
 
 .sports-carousel::-webkit-scrollbar {
     display: none;
 }
+.sports-carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
 
 /* Sports Card */
 .sports-card {
+    flex: 0 0 calc(100% / 4 - 10px); 
+    margin: 0 5px;
     background-color: #111;
     padding: 15px;
     border-radius: 12px;
     text-align: center;
-    width: 220px;
     border: 2px solid rgba(0, 255, 102, 0.5);
     transition: transform 0.3s ease;
     text-decoration: none;
     color: white;
 }
 
+
 .sports-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 255, 102, 0.3);
 }
 
-/* Sports Image */
 .sports-card img {
     width: 100%;
     border-radius: 10px;
 }
 
-/* Sports Title */
 .sports-card h3 {
     font-size: 18px;
     margin: 10px 0;
@@ -487,6 +484,15 @@
     background: #15D866;
 }
 
+/* Mobile View:  */
+@media (max-width: 768px) {
+    .sports-card {
+        flex: 0 0 calc(100% / 2 - 10px); 
+    }
+}
+
+
+
 .point-table {
     text-align: center;
     padding: 50px 20px;
@@ -505,23 +511,21 @@
     font-weight: bold;
 }
 
-/* Table Container */
 .table-container {
     width: 100%;
     max-width: 900px;
     margin: 20px auto;
     overflow-x: auto;
+    
 }
 
-/* Table */
 table {
     width: 100%;
-    border-collapse: separate;
+    border-collapse: collapse;
     border-spacing: 0;
     background: transparent;
 }
 
-/* Table Head */
 thead {
     background: #15D866;
     color: #000;
@@ -542,7 +546,6 @@ thead tr th:last-child {
     border-top-right-radius: 30px;
 }
 
-/* Table Rows */
 tbody tr {
     background: #0F1C23;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -563,11 +566,9 @@ tbody tr:last-child td:last-child {
 
 td {
     padding: 20px;
-    /* Increased padding for better row spacing */
     text-align: left;
 }
 
-/* First and Last Cell Adjustments */
 td:first-child {
     padding-left: 20px;
 }
@@ -576,7 +577,6 @@ td:last-child {
     padding-right: 20px;
 }
 
-/* Team Squad Column */
 td img {
     width: 30px;
     height: 25px;
@@ -610,19 +610,17 @@ td img {
     max-width: 1200px;
     margin: auto;
 }
-/* Left Content */
+
 .form-content {
     flex: 1;
     padding-right: 50px;
 }
-/* Subheading */
 .form-content .subheading {
     color: #15D866;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-/* Heading */
 .form-content h2 {
     font-size: 36px;
     font-weight: bold;
@@ -635,7 +633,6 @@ form {
     gap: 15px;
 }
 
-/* Two Inputs in One Row */
 .form-row {
     display: flex;
     gap: 15px;
@@ -680,7 +677,6 @@ textarea {
     color: #15D866;
 }
 
-/* Right Image */
 .form-image {
     flex: 1;
     display: flex;
@@ -814,7 +810,7 @@ textarea {
  /* Carousel Mobile View Adjustments */
 @media (max-width: 768px) {
     .carousel {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column; 
         text-align: center;
         padding: 20px;
     }
@@ -824,20 +820,16 @@ textarea {
         padding: 20px;
         text-align: center;
     }
-
-    /* Hide Right Image on Mobile */
     .right-img {
         display: none;
     }
 
-    /* Center the Left Image */
     .left-img {
-        width: 80%; /* Adjust for smaller screens */
+        width: 80%; 
         max-width: 300px;
         margin-bottom: 20px;
     }
 
-    /* Move Text Below Image */
     .carousel-text {
         width: 90%;
         max-width: 400px;
@@ -853,7 +845,6 @@ textarea {
         font-size: 14px;
     }
 
-    /* Adjust Carousel Dots */
     .carousel-dots {
         margin-top: 10px;
     }
