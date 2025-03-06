@@ -298,11 +298,10 @@
 .game-carousel {
     display: flex;
     overflow: hidden;
-    /* Hide extra items */
     width: 100%;
     max-width: 900px;
-    /* Set fixed width */
     margin: auto;
+    padding: 20px 0px;
 }
 
 /* Hide scrollbar */
@@ -402,14 +401,12 @@
     color: white;
 }
 
-/* Section Subheading */
 .trending-sports .subheading {
     color: #15D866;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-/* Section Title */
 .trending-sports h2 {
     font-size: 32px;
     font-weight: bold;
@@ -425,7 +422,6 @@
     scroll-behavior: smooth;
 }
 
-/* Hide scrollbar */
 .sports-carousel::-webkit-scrollbar {
     display: none;
 }
@@ -460,7 +456,6 @@
     margin: 10px 0;
 }
 
-/* Entry Fee */
 .entry-fee {
     font-size: 14px;
     color: gray;
@@ -492,7 +487,6 @@
     background: #15D866;
 }
 
-/* Point Table Section */
 .point-table {
     text-align: center;
     padding: 50px 20px;
@@ -500,14 +494,12 @@
     color: white;
 }
 
-/* Section Subheading */
 .point-table .subheading {
     color: #15D866;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-/* Section Title */
 .point-table h2 {
     font-size: 32px;
     font-weight: bold;
@@ -526,9 +518,7 @@ table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    /* Ensures proper spacing for rounded corners */
     background: transparent;
-    /* Keep background same as design */
 }
 
 /* Table Head */
@@ -539,13 +529,11 @@ thead {
     text-transform: uppercase;
 }
 
-/* Header Cells */
 thead th {
     padding: 15px;
     text-align: left;
 }
 
-/* Rounded Header Corners */
 thead tr th:first-child {
     border-top-left-radius: 30px;
 }
@@ -557,17 +545,14 @@ thead tr th:last-child {
 /* Table Rows */
 tbody tr {
     background: #0F1C23;
-    /* Keep row background same */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: 0.3s ease-in-out;
 }
 
-/* Row Hover Effect */
 tbody tr:hover {
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Rounded Corners for Last Row */
 tbody tr:last-child td:first-child {
     border-bottom-left-radius: 30px;
 }
@@ -576,7 +561,6 @@ tbody tr:last-child td:last-child {
     border-bottom-right-radius: 30px;
 }
 
-/* Table Cells */
 td {
     padding: 20px;
     /* Increased padding for better row spacing */
@@ -619,7 +603,6 @@ td img {
     color: white;
 }
 
-/* Container */
 .form-container {
     display: flex;
     align-items: center;
@@ -627,13 +610,11 @@ td img {
     max-width: 1200px;
     margin: auto;
 }
-
 /* Left Content */
 .form-content {
     flex: 1;
     padding-right: 50px;
 }
-
 /* Subheading */
 .form-content .subheading {
     color: #15D866;
@@ -647,7 +628,6 @@ td img {
     font-weight: bold;
     margin-bottom: 20px;
 }
-
 /* Form */
 form {
     display: flex;
@@ -664,7 +644,6 @@ form {
 .form-row input {
     flex: 1;
 }
-
 /* Input Fields */
 input,
 textarea {
@@ -738,7 +717,7 @@ textarea {
     text-align: center;
 }
 
-/* Top Section - Navigation */
+/* Footer Section - Navigation */
 .footer-top {
     margin-bottom: 20px;
 }
@@ -832,5 +811,58 @@ textarea {
         justify-content: center;
     }
 }
+ /* Carousel Mobile View Adjustments */
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .carousel-item {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Hide Right Image on Mobile */
+    .right-img {
+        display: none;
+    }
+
+    /* Center the Left Image */
+    .left-img {
+        width: 80%; /* Adjust for smaller screens */
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    /* Move Text Below Image */
+    .carousel-text {
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .carousel-text h2 {
+        font-size: 22px;
+    }
+
+    .carousel-text p {
+        font-size: 14px;
+    }
+
+    /* Adjust Carousel Dots */
+    .carousel-dots {
+        margin-top: 10px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
 
 
