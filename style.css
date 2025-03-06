@@ -1,0 +1,836 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: linear-gradient(to right, #004d1a, #000000);
+    /* Green to Black */
+    height: 80px;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    /* Adjust as needed */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #15D866;
+    /* Green hover effect */
+}
+
+/* Login Button */
+.login-btn {
+    background-color: #15D866;
+    color: #000;
+    border: 2px solid #15D866;
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: transparent;
+    color: #15D866;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* Subheading */
+.hero .subheading {
+    color: #15D866;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Main Heading */
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: #15D866;
+    /* Green */
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 25px;
+    margin: 10px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.green-btn {
+    background-color: #15D866;
+    color: #000;
+    border: 2px solid #15D866;
+}
+
+.green-btn:hover {
+    background: transparent;
+    color: #15D866;
+}
+
+.yellow-btn {
+    background-color: #FFD700;
+    color: #000;
+    border: 2px solid #FFD700;
+}
+
+.yellow-btn:hover {
+    background: transparent;
+    color: #FFD700;
+}
+
+/* Carousel */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Carousel Item (Main Container) */
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgba(0, 255, 102, 0.1), rgba(255, 215, 0, 0.1));
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    position: relative;
+}
+
+/* Left & Right Images */
+.left-img,
+.right-img {
+    width: 250px;
+    height: auto;
+}
+
+/* Text Content Centered */
+.carousel-text {
+    text-align: center;
+    max-width: 500px;
+    flex-grow: 1;
+    /* Allows text to take equal space */
+}
+
+.carousel-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.carousel-text p {
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+/* Centering Fix */
+.carousel-item img {
+    flex: 0 1 30%;
+    /* Allows images to take up to 30% space */
+}
+
+.carousel-item .carousel-text {
+    flex: 0 1 40%;
+    /* Ensures the text takes up to 40% */
+    text-align: center;
+}
+
+/* Carousel Dots */
+/* Position the dots below the carousel */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    /* Space below carousel */
+}
+
+/* Dot Styles */
+.dot {
+    width: 12px;
+    height: 12px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dot.active {
+    background: #15D866;
+    transform: scale(1.2);
+}
+
+/* Features Section */
+.features {
+    background-color: #0F1C23;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+/* Feature Item */
+.feature-item {
+    display: flex;
+    align-items: center;
+    color: #15D866;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* Diamond Separator */
+.feature-item img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Trending Games Section */
+.trending-games {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* Section Subheading */
+.trending-games .subheading {
+    color: #15D866;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Section Title */
+.trending-games h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Game Carousel */
+.game-carousel {
+    display: flex;
+    overflow: hidden;
+    /* Hide extra items */
+    width: 100%;
+    max-width: 900px;
+    /* Set fixed width */
+    margin: auto;
+}
+
+/* Hide scrollbar */
+.game-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Game Card Wrapper */
+.game-carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Game Card */
+.game-card {
+    background-color: #111;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 220px;
+    border: 2px solid rgba(0, 255, 102, 0.5);
+    transition: transform 0.3s ease;
+    flex: 0 0 calc(100% / 4 - 10px);
+    /* Only 4 items per view */
+    margin: 0 5px;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+}
+
+/* Game Image */
+.game-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Game Title */
+.game-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Entry Fee */
+.entry-fee {
+    font-size: 14px;
+    color: gray;
+}
+
+.entry-fee .free {
+    color: #15D866;
+    font-weight: bold;
+}
+
+/* Carousel Dots */
+.game-carousel-dots {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.game-carousel-dots .dot {
+    width: 12px;
+    height: 12px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.game-carousel-dots .dot.active {
+    background: #15D866;
+}
+
+/* Make Cards Clickable */
+.game-card {
+    text-decoration: none;
+    /* Remove link underline */
+    color: white;
+    /* Ensure text remains white */
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 255, 102, 0.3);
+}
+
+/* Trending Sports Section */
+.trending-sports {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* Section Subheading */
+.trending-sports .subheading {
+    color: #15D866;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Section Title */
+.trending-sports h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Sports Carousel */
+.sports-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.sports-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Sports Card */
+.sports-card {
+    background-color: #111;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 220px;
+    border: 2px solid rgba(0, 255, 102, 0.5);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.sports-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 255, 102, 0.3);
+}
+
+/* Sports Image */
+.sports-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Sports Title */
+.sports-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Entry Fee */
+.entry-fee {
+    font-size: 14px;
+    color: gray;
+}
+
+.entry-fee .free {
+    color: #15D866;
+    font-weight: bold;
+}
+
+/* Carousel Dots */
+.sports-carousel-dots {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sports-carousel-dots .dot {
+    width: 12px;
+    height: 12px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.sports-carousel-dots .dot.active {
+    background: #15D866;
+}
+
+/* Point Table Section */
+.point-table {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0d0d0d;
+    color: white;
+}
+
+/* Section Subheading */
+.point-table .subheading {
+    color: #15D866;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Section Title */
+.point-table h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Table Container */
+.table-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    /* Ensures proper spacing for rounded corners */
+    background: transparent;
+    /* Keep background same as design */
+}
+
+/* Table Head */
+thead {
+    background: #15D866;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Header Cells */
+thead th {
+    padding: 15px;
+    text-align: left;
+}
+
+/* Rounded Header Corners */
+thead tr th:first-child {
+    border-top-left-radius: 30px;
+}
+
+thead tr th:last-child {
+    border-top-right-radius: 30px;
+}
+
+/* Table Rows */
+tbody tr {
+    background: #0F1C23;
+    /* Keep row background same */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s ease-in-out;
+}
+
+/* Row Hover Effect */
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Rounded Corners for Last Row */
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 30px;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 30px;
+}
+
+/* Table Cells */
+td {
+    padding: 20px;
+    /* Increased padding for better row spacing */
+    text-align: left;
+}
+
+/* First and Last Cell Adjustments */
+td:first-child {
+    padding-left: 20px;
+}
+
+td:last-child {
+    padding-right: 20px;
+}
+
+/* Team Squad Column */
+td img {
+    width: 30px;
+    height: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    td img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Registration Form Section */
+.registration-form {
+    padding: 60px 20px;
+    background-color: #0F1C23;
+    color: white;
+}
+
+/* Container */
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Content */
+.form-content {
+    flex: 1;
+    padding-right: 50px;
+}
+
+/* Subheading */
+.form-content .subheading {
+    color: #15D866;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Heading */
+.form-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Two Inputs in One Row */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row input {
+    flex: 1;
+}
+
+/* Input Fields */
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #15D866;
+    background: #0F1C23;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #15D866;
+    color: #000;
+    font-weight: bold;
+    border: 2px solid #15D866;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: transparent;
+    color: #15D866;
+}
+
+/* Right Image */
+.form-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.form-image img {
+    max-width: 90%;
+    height: auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .form-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #0d0d0d;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Top Section - Navigation */
+.footer-top {
+    margin-bottom: 20px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.footer-nav li a:hover {
+    color: #15D866;
+}
+
+/* Middle Section - Contact & Info */
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-box {
+    flex: 1;
+}
+
+.info-box h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.info-box h4 span {
+    color: #15D866;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 30px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Bottom Section - Copyright */
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-box {
+        margin-bottom: 15px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+
