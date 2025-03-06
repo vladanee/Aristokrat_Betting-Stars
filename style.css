@@ -723,6 +723,7 @@ textarea {
     justify-content: center;
     gap: 20px;
     list-style: none;
+    padding: 0;
 }
 
 .footer-nav li a {
@@ -750,6 +751,7 @@ textarea {
 
 .info-box {
     flex: 1;
+    padding: 10px;
 }
 
 .info-box h4 {
@@ -770,6 +772,7 @@ textarea {
 .social-icons {
     display: flex;
     gap: 10px;
+    justify-content: center;
 }
 
 .social-icons a img {
@@ -794,6 +797,12 @@ textarea {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .footer-nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
     .footer-info {
         flex-direction: column;
         text-align: center;
@@ -807,6 +816,7 @@ textarea {
         justify-content: center;
     }
 }
+
  /* Carousel Mobile View Adjustments */
 @media (max-width: 768px) {
     .carousel {
